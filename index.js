@@ -14,7 +14,8 @@ let posts = [
     date: "2023-08-01T10:00:00Z",
   },
   {
-    id: 2,
+    id: 2
+,
     title: "The Impact of Artificial Intelligence on Modern Businesses",
     content:
       "Artificial Intelligence (AI) is no longer a concept of the future. It's very much a part of our present, reshaping industries and enhancing the capabilities of existing systems. From automating routine tasks to offering intelligent insights, AI is proving to be a boon for businesses. With advancements in machine learning and deep learning, businesses can now address previously insurmountable problems and tap into new opportunities.",
@@ -63,7 +64,7 @@ app.post("/posts", (req, res) => {
     date: new Date(),
   }
   lastId = newId;
-  posts.push(newPost);
+  posts.unshift(newPost);
   res.json(newPost).status(201);
 })
 
